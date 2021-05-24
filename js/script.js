@@ -1,3 +1,16 @@
+// スムーススクロール
+$(function () {
+    $('a[href^="#"]').click(function () {
+      let speed = 500;
+      let href = $(this).attr("href");
+      let target = $(href == "#" || href == "" ? "html" : href);
+      let position = target.offset().top;
+      $("html, body").animate({ scrollTop: position }, speed, "swing");
+      return false;
+    });
+});
+
+// ヘッダーアニメーション
 particlesJS('hoge', {
     "particles": {
 
@@ -150,6 +163,7 @@ new Vivus('move', {
 var $nav = $('#navArea');
 var $btn = $('.toggle_btn');
 var $mask = $('.gnav-item');
+var $link = $('.gnav-link');
 var open = 'open'; // class
 // menu open close
 $btn.on('click', function () {
@@ -162,9 +176,11 @@ $btn.on('click', function () {
     }
 });
 // mask close
-$mask.on('click', function () {
-    $nav.removeClass(open);
-    $("html").removeClass("is-fixed");
+$link.on('click', function () {
+    if ($nav.hasClass(open)) {
+        $nav.removeClass(open);
+        $("html").removeClass("is-fixed");
+    }
 });
 
 // Swiper
@@ -184,4 +200,39 @@ var mySwiper = new Swiper('.swiper-container', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
 	}
+});
+
+function changeColor() {
+    var timing = 30; //　変化するタイミングを微調整する
+  
+    var scrollY = window.pageYOffset;
+    var body = document.body;
+  
+    var trigger1 = document.getElementById('js-section-1');
+    var trigger2 = document.getElementById('js-section-2');
+  
+    var trigger1Y = trigger1.getBoundingClientRect().top; // ウィンドウ上からの要素の位置
+    var trigger2Y = trigger2.getBoundingClientRect().top;
+  
+    // 白背景の時はbodyの.bg-is-blackを削除
+    // 黒背景の時はbodyに.bt-is-blackを付与
+    if(trigger2Y - timing > 0 && 0 >= trigger1Y - timing) {
+        body.classList.remove('bg-is-black');
+    } else {
+        body.classList.add('bg-is-black');
+    }
+  }
+  
+window.addEventListener('scroll', changeColor);
+
+//下から表示させる要素を指定
+let $pagetop2 = $('.toggle_btn');
+
+$(window).on( 'scroll', function () {
+  //スクロール位置を取得
+  if ( $(this).scrollTop() < 500 ) {
+    $pagetop2.removeClass('logo-active');
+  } else {
+    $pagetop2.addClass('logo-active');
+  }
 });
