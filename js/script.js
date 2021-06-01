@@ -42,6 +42,8 @@ $link.on('click', function () {
     }
 });
 
+AOS.init()
+
 // Swiper
 var mySwiper = new Swiper('.swiper-container', {
 	slidesPerView: 1,
