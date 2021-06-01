@@ -82,12 +82,11 @@ video {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  font-family: 'ヒラギノ角ゴシック';
+  font-family: "source-han-sans-japanese", sans-serif;
 }
 
 body {
-  line-height: 1.5em;
-  background-color: #e1e5e9;
+  background-color: #f4f4f4;
 }
 
 img {
@@ -192,6 +191,15 @@ select {
   vertical-align: middle;
 }
 
+/*======================
+フォント
+=======================*/
+.gothic {
+  font-family: "source-han-sans-japanese", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -203,23 +211,31 @@ body {
 }
 
 .section-title {
-  max-width: 220px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 90px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: center;
+  font-size: 48px;
+  line-height: 32px;
 }
 
-.section-title img {
-  width: 100%;
-  height: 100%;
+.section-title span {
+  font-size: 14px;
 }
 
 .section .inner {
   padding: 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media screen and (max-width: 789px) {
+  .section-title {
+    line-height: 24px;
+    font-size: 32px;
+  }
 }
 
 /*======================
@@ -305,6 +321,10 @@ body {
   margin: 0;
   margin-bottom: 50%;
   text-align: center;
+}
+
+.hunburger .inner ul li:last-child {
+  margin-bottom: 0;
 }
 
 .hunburger .inner ul li a {
@@ -452,27 +472,19 @@ work
   position: relative;
 }
 
-.works .section-title {
-  max-width: 180px;
-  width: 100%;
-}
-
 .works__all {
   text-align: center;
   position: absolute;
-  top: 80%;
+  top: 66%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.works__all a {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.works__all a:hover {
-  opacity: 0.5;
+.works__all:hover {
+  opacity: 0.5s;
 }
 
 .parallax {
@@ -481,7 +493,7 @@ work
 
 .swiper-container {
   position: absolute !important;
-  top: 60% !important;
+  top: 46% !important;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -539,7 +551,7 @@ work
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 60% !important;
+  top: 46% !important;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
@@ -565,12 +577,51 @@ work
   right: 9% !important;
 }
 
+.jisseki .pc567-only {
+  display: block;
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.jisseki .sp567-only {
+  display: none;
+}
+
+.jisseki .sp567-only .performance-sp {
+  padding-top: 60px;
+}
+
+.jisseki .sp567-only p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.jisseki .performance-pc {
+  text-align: center;
+  padding-top: 60px;
+  font-size: 14px;
+}
+
+.jisseki .performance-pc .big {
+  font-size: 20px;
+}
+
+.jisseki .attention {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 789px) {
   .works {
     padding-bottom: 50px;
   }
   .works .section-title {
-    padding-top: 250px;
+    padding-top: 130px;
     padding-bottom: 50px;
   }
   .works__all {
@@ -580,6 +631,9 @@ work
     -webkit-transform: unset !important;
             transform: unset !important;
     margin-top: 50px;
+  }
+  .works .attention {
+    font-size: 12px;
   }
   .swiper-container {
     position: unset !important;
@@ -592,12 +646,9 @@ work
   .swiper-button-prev,
   .swiper-button-next {
     background-image: none !important;
-    /* デフォルトのボタン画像を消す */
     width: 28px !important;
-    /* ボタンの幅 */
     margin-top: -43px !important;
-    /* 縦中央配置用：ボタンの高さの半分のネガティブマージン（top:50%がすでに設定されている） */
-    top: 57% !important;
+    top: 37% !important;
   }
   .swiper-button-prev {
     left: 4% !important;
@@ -607,27 +658,43 @@ work
     right: 4% !important;
     color: #000;
   }
-  /* 前ページボタンのスタイル */
   .swiper-button-prev:after {
     font-family: "Font Awesome 5 Free" !important;
     content: "<" !important;
-    /* angle-double-leftのUnicode */
     display: inline-block;
     width: 28px !important;
-    /* ボタンの幅 */
     font-size: 48px !important;
     color: #555555 !important;
   }
-  /* 次ページボタンのスタイル */
   .swiper-button-next:after {
     font-family: "Font Awesome 5 Free" !important;
     content: ">" !important;
-    /* angle-double-rightのUnicode */
     display: inline-block;
     width: 28px !important;
-    /* ボタンの幅 */
     font-size: 48px !important;
     color: #555555 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-image: none !important;
+    width: 28px !important;
+    margin-top: -43px !important;
+    top: 38% !important;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .pc567-only {
+    display: none !important;
+  }
+  .sp567-only {
+    display: block !important;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 
@@ -639,38 +706,50 @@ about
   height: 100vh;
 }
 
-.parallax {
+.about .parallax {
   position: relative;
 }
 
-.home-profile-container {
+.about .about-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 99px;
+  margin-bottom: 20px;
+}
+
+.about .about-img img {
+  width: 100%;
+  border-radius: 99px;
+}
+
+.about .home-profile-container {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
-  padding: 180px 100px;
+  padding: 120px 100px;
 }
 
-@media screen and (max-width: 789px) {
-  .home-profile-container {
-    padding: 70px 15px !important;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-
-.home-profile-data {
+.about .home-profile-data {
   margin-bottom: 14px;
 }
 
-.home-profile-p {
+.about .home-profile-p {
   font-size: 14px;
   letter-spacing: 0.1em;
   line-height: 2.167;
 }
 
-.home-profile-dt {
+.about .home-profile-p .none {
+  text-decoration: line-through;
+}
+
+.about .home-profile-p a {
+  border-bottom: 1px solid #000;
+}
+
+.about .home-profile-dt {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   margin-bottom: 30px;
@@ -681,21 +760,21 @@ about
   letter-spacing: 0.1em;
 }
 
-.home-profile-dt img {
+.about .home-profile-dt img {
   max-width: 400px;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.home-profile-dd {
+.about .home-profile-dd {
   margin-bottom: 14px;
   font-size: 14px;
   letter-spacing: 0.1em;
   line-height: 2.167;
 }
 
-.home-profile-data li {
+.about .home-profile-data li {
   font-size: 14px;
   letter-spacing: 0.1em;
   line-height: 2.167;
@@ -724,6 +803,16 @@ about
 }
 
 @media screen and (max-width: 789px) {
+  .about-img {
+    margin: 0 auto;
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .home-profile-container {
+    padding: 48px 15px !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   .home-profile-dt img {
     width: 60%;
   }
@@ -819,12 +908,13 @@ skill
 /*======================
 service
 =======================*/
-.service {
+.services {
+  position: relative;
   width: 100%;
   height: 100vh;
 }
 
-.service-items {
+.services .service-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,13 +928,13 @@ service
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
-  top: 60%;
+  top: 54%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.service-item {
+.services .service-item {
   color: #555;
   position: relative;
   width: 300px;
@@ -853,12 +943,7 @@ service
   font-size: 14px;
 }
 
-.service-item p {
-  margin: 0;
-  padding: 0;
-}
-
-.service-item-logo {
+.services .service-item-logo {
   position: absolute;
   top: -45px;
   left: 50%;
@@ -866,8 +951,6 @@ service
           transform: translateX(-50%);
   width: 80px;
   height: 80px;
-  border-radius: 50%;
-  border: 1px solid #555;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -878,58 +961,40 @@ service
       -ms-flex-align: center;
           align-items: center;
   font-size: 30px;
-  font-size: 1.875rem;
-  background-color: #fff;
 }
 
-.service-item-title {
+.services .service-item-logo .coding {
+  font-size: 36px;
+}
+
+.services .service-item-logo .wordpress {
+  font-size: 50px;
+}
+
+.services .service-item-logo .seo {
+  font-size: 36px;
+}
+
+.services .service-item-title {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 18px;
-  font-size: 1.125rem;
   font-weight: 700;
   color: #f6b483;
 }
 
-.service-item-text {
+.services .service-item-text {
   line-height: 30px;
 }
 
-.btn {
-  position: relative;
-  width: 250px;
-  height: 50px;
-  overflow: hidden;
-  line-height: 50px;
-  margin: 0 auto;
-  color: #fff;
-}
-
-.btn .btn-cover {
-  width: 100%;
-  text-align: center;
-}
-
-.btn-link {
-  color: inherit;
-  display: block;
+.services .service-price {
   position: absolute;
-  background-color: #a9a9a9;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  text-align: center;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.btn .btn-link:active,
-.btn-link:hover {
-  outline-width: 0;
-  cursor: pointer;
-  background-color: #f33;
+  bottom: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 556px) and (max-width: 1024px) {
@@ -961,11 +1026,11 @@ service
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: unset;
-    top: unset;
-    left: unset;
-    -webkit-transform: unset;
-            transform: unset;
+    position: unset !important;
+    top: unset !important;
+    left: unset !important;
+    -webkit-transform: unset !important;
+            transform: unset !important;
     padding: 50px 0;
   }
   .service-item {
@@ -977,6 +1042,15 @@ service
   .service-item-text {
     font-size: 12px;
     margin: 0 auto;
+  }
+  .service-price {
+    position: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    -webkit-transform: unset !important;
+            transform: unset !important;
+    text-align: center;
+    padding-bottom: 80px;
   }
 }
 
@@ -993,12 +1067,17 @@ contact
   font-size: 15px;
   line-height: 1.8;
   font-weight: 500;
-  margin: 50px 0;
+  margin: 72px 0 50px 0;
+}
+
+.page-desc a {
+  border-bottom: 1px solid #000;
 }
 
 .contact-mail {
   position: relative;
   margin: 0 0 50px;
+  padding-top: 12px;
   font-weight: 400;
   text-align: center;
   font-size: 12px;
@@ -1037,14 +1116,14 @@ contact
   border-bottom: 1px solid #000;
 }
 
-.breadcrumbs {
+.home {
   margin: 0 0 70px;
   text-align: center;
   position: relative;
-  padding-top: 200px;
+  padding-top: 180px;
 }
 
-.breadcrumbs:before {
+.home:before {
   position: absolute;
   content: "";
   top: 0;
@@ -1165,15 +1244,6 @@ body.bg-is-black .footer-logo {
   .skill .section-title {
     padding-top: 120px;
   }
-  .skill-list {
-    margin-top: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 100%;
-  }
   .skill-title {
     font-size: 20px;
   }
@@ -1209,7 +1279,7 @@ body.bg-is-black .footer-logo {
 ----------------------------------------------------*/
 /*media Queries 556 - 1024
 ----------------------------------------------------*/
-@media screen and (min-width: 5768px) and (max-width: 1024px) {
+@media screen and (min-width: 576px) and (max-width: 1024px) {
   .service-item {
     width: 45%;
   }

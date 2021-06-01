@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./scss/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon2.png">
     <title>Hattori Shota</title>
 </head>
 
@@ -48,13 +50,13 @@
                 <nav class="hunburger">
                     <div class="inner">
                         <ul>
-                            <li class="gnav-item"><a class="gnav-link" href="#hoge">HOME</a></li>
-                            <li class="gnav-item"><a class="gnav-link" href="#works-section">WORKS</a></li>
+                            <li class="gnav-item"><a class="gnav-link gothic" href="#hoge">Home</a></li>
+                            <li class="gnav-item"><a class="gnav-link gothic" href="#works-section">Works</a></li>
                             <!-- <li class="gnav-item"><a class="gnav-link" href="#feature-section">FEATURE</a></li> -->
-                            <li class="gnav-item"><a class="gnav-link" href="#about-section">ABOUT</a></li>
-                            <li class="gnav-item"><a class="gnav-link" href="#skill-section">SKILL</a></li>
-                            <li class="gnav-item"><a class="gnav-link" href="#service-section">SERVICE</a></li>
-                            <li class="gnav-item"><a class="gnav-link" href="#contact-section">CONTACT</a></li>
+                            <li class="gnav-item"><a class="gnav-link gothic" href="#about-section">About</a></li>
+                            <li class="gnav-item"><a class="gnav-link gothic" href="#skills-section">Skills</a></li>
+                            <li class="gnav-item"><a class="gnav-link gothic" href="#services-section">Services</a></li>
+                            <li class="gnav-item"><a class="gnav-link gothic" href="#contact-section">Contact</a></li>
                             <!-- <li class="gnav-item"><a class="gnav-link" href="">BLOG</a></li> -->
                         </ul>
                     </div>
@@ -73,40 +75,18 @@
         </div>
     </header>
     <section class="works section" id="works-section">
-        <h1 class="section-title"><img src="./img/works/works.png" alt="works"></h1>
+        <h1 class="section-title gothic">
+            Works<br>
+            <span>作品集</span>
+        </h1>
         <!-- スライダーのメインコンテナの div 要素 -->
         <div class="swiper-container">
             <!-- ラッパーの（スライドを囲む） div 要素 -->
             <div class="swiper-wrapper">
                 <!-- それぞれのスライドの div 要素 -->
                 <div class="swiper-slide">
-                    <a href="#">
-                        <img src="./img/works/squere.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="./img/works/squere.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="./img/works/squere.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="./img/works/squere.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="./img/works/squere.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="./img/works/squere.png" alt="">
+                    <a href="./works/works-1.html">
+                        <img src="./img/works/works-1.png" alt="">
                     </a>
                 </div>
             </div>
@@ -115,52 +95,68 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
-        <div class="works__all"><a href="">実績一覧　＞</a></div>
+        <div class="works__all"><a href="./works/works.html">実績一覧　＞</a></div>
+        <div class="jisseki">
+            <div class="pc567-only">
+                <p class="performance-pc">
+                    これまでの制作実績：LP 
+                    <span class="big">12</span>
+                    件 / コーポレートサイト(WordPress) 
+                    <span class="big">3</span>件<br class="br567">
+                    <span class="small">※2021/5/24 現在</span>
+                </p>
+                <p class="attention">*クライアント様のご都合で実績紹介できない場合がございます。</p>
+            </div>
+            <div class="sp567-only">
+                <p class="performance-sp">これまでの制作実績：</p>
+                <p>LP <span class="big">12</span>件 / コーポレートサイト(WordPress) <span class="big">3</span>件</p>
+                <p class="attention">*クライアント様のご都合で実績紹介できない場合がございます。</p>
+                <p><span class="small">※2021/5/24 現在</span></p>
+            </div>
+        </div>
     </section>
     <section class="about section" id="about-section">
         <div class="parallax" data-parallax="scroll" data-image-src="./img/about/parallax_about.jpeg">
             <div class="home-profile">
-
                 <div class="home-profile-container">
-
+                    <div class="about-img">
+                        <img src="./img/about/profile2.jpg" alt="">
+                    </div>
                     <dl>
                         <dt class="home-profile-dt"><img src="./img/about/about.png" alt="Hattori Shota"></dt>
                     </dl>
-
                     <ul class="home-profile-data">
-                        <li>tel: 080-8298-3507</li>
+                        <li>tel: <a href="tel:08082983507">080-8298-3507</a></li>
                         <li>mail: <a href="mailto:hshota.27&#64;gmail.com">hshota.27@gmail.com</a>
                         </li>
                         <!-- <li>[ <a href="https://www.facebook.com/kanmura" target="_blank">Facebook</a> ] [ <a
                                 href="https://moufdesign.tumblr.com" target="_blank">Tumblr</a> ]</li> -->
                     </ul>
-
-                    <p class="home-profile-p">はじめまして。服部 翔太と申します。
-
+                    <p class="home-profile-p">
+                        はじめまして。服部 翔太と申します。
                         北海道札幌市在住、20歳。<br>
-
                         北海学園大学経営学部に在学しながらWeb制作のフリーランスとして、
                         日々活動しております。<br>
-
-                        お客様に寄り添い、納得されるまでしっかりと責任感を持って
-                        お仕事をさせていただきます。<br>お仕事のご依頼は<a href="#section-home-contact">お問い合わせフォーム</a>また<a
-                            href="&#109;ai&#108;to&#58;info&#64;m&#111;uf&#100;&#101;&#115;&#105;&#103;n.&#105;nf&#111;">メール</a>よりお気軽にお送りください。
+                        お客様に寄り添い、納得されるまでしっかりと責任感を持ってお仕事をさせていただきます。<br>
+                        お仕事のご依頼は<a class="none">お問い合わせフォーム</a>また<a href="mailto:hshota.27@gmail.com">メール</a>よりお気軽にお送りください。
                     </p>
-                    <p class="home-profile-p">We have been acting with the main business lines of web developer.<br>If
+                    <p class="home-profile-p">
+                        I have been acting with the main business lines of web developer.<br>If
                         you have some opinion or work to request, please feel free
-                        to contact us by the inquiry form or email.</p>
-
+                        to contact us by the inquiry form or email.
+                    </p>
                 </div>
                 <!--.home-profile-container-->
-
             </div>
         </div>
         <!--.home-profile-->
     </section>
     <section class="skill section" id="skills-section">
         <div class="inner">
-            <h1 class="section-title"><img src="./img/skill/skills.png" alt="skills"></h1>
-
+            <h1 class="section-title gothic">
+                Skills<br>
+                <span>スキル</span>
+            </h1>
             <div class="skill-list">
                 <div class="skill-item scrollanime slide-left">
                     <div class="skill-image-wrapper">
@@ -169,9 +165,7 @@
                     </div>
                     <div class="skill-body">
                         <h3 class="skill-title">HTML5/CSS3</h3>
-                        <p>
-                            HTMLとCSSを使った静的なサイトや、CSSでのアニメーションを用いた動的なサイトの作成が得意です。また、レスポンシブ対応も行えます。
-                        </p>
+                        <p>HTMLとCSSを使った静的なサイトや、CSSでのアニメーションを用いた動的なサイトの作成が得意です。また、レスポンシブ対応も行えます。</p>
                     </div>
                 </div>
                 <div class="skill-item scrollanime slide-right">
@@ -180,9 +174,7 @@
                     </div>
                     <div class="skill-body">
                         <h3 class="skill-title">JavaScript</h3>
-                        <p>
-                            jQueryなどのライブラリを利用しながらサイトに動きをつけていきます。
-                        </p>
+                        <p>jQueryなどのライブラリを利用しながらサイトに動きをつけていきます。</p>
                     </div>
                 </div>
                 <div class="skill-item scrollanime slide-right">
@@ -191,7 +183,7 @@
                     </div>
                     <div class="skill-body">
                         <h3 class="skill-title">PHP</h3>
-                        <p>PHPを利用してフォーム作成を行います。</p>
+                        <p>主にLPではPHPを利用してフォーム作成を行います。</p>
                     </div>
                 </div>
                 <div class="skill-item scrollanime slide-left">
@@ -200,9 +192,7 @@
                     </div>
                     <div class="skill-body">
                         <h3 class="skill-title">WordPress</h3>
-                        <p>
-                            WordPressを用いてサイト作成が可能です。またサーバーへのインストールや、オリジナルのテーマを用いるサイト制作もお任せ下さい
-                        </p>
+                        <p>WordPressを用いてサイト作成が可能です。またサーバーへのインストールや、オリジナルのテーマを用いるサイト制作もお任せ下さい。</p>
                     </div>
                 </div>
                 <div class="skill-item scrollanime slide-right">
@@ -211,9 +201,7 @@
                     </div>
                     <div class="skill-body">
                         <h3 class="skill-title">Photoshop</h3>
-                        <p>
-                            サイト制作に欠かせないソフトである｢フォトショップ｣が一番使い慣れております。簡単なイラストや写真の加工なども可能です。
-                        </p>
+                        <p>サイト制作に欠かせないソフトである｢フォトショップ｣が一番使い慣れております。簡単なイラストや写真の加工なども可能です。</p>
                     </div>
                 </div>
                 <div class="skill-item scrollanime slide-left">
@@ -222,8 +210,7 @@
                     </div>
                     <div class="skill-body">
                         <h3 class="skill-title">Illustrator</h3>
-                        <p>
-                            illustratorを使ったロゴ制作やデザイン制作が可能です。</p>
+                        <p>写真やイラストのレイアウトがしやすく画像がはっきりしているという特徴を持つillustratorを使った制作が可能です。</p>
                     </div>
                 </div>
                 <div class="skill-item scrollanime slide-right">
@@ -232,7 +219,7 @@
                     </div>
                     <div class="skill-body">
                         <h3 class="skill-title">XD</h3>
-                        <p>illustratorと同様にXDを使ったサイト制作が可能です。</p>
+                        <p>Adobeソフトとの連携が可能でとても使いやすいとされているXDを使ったサイト制作が可能です。</p>
                     </div>
                 </div>
                 <div class="skill-item scrollanime slide-left">
@@ -250,44 +237,54 @@
     <section class="services section" id="services-section">
         <div class="parallax" data-parallax="scroll" data-image-src="./img/services/parallax_service.jpeg">
             <div class="inner">
-                <h1 class="section-title"><img src="./img/services/services.png" alt="works"></h1>
+                <h1 class="section-title gothic">
+                    Services<br>
+                    <span>私にできること</span>
+                </h1>
                 <div class="service-items scrollanime downup">
                     <div class="service-item">
                         <div class="service-item-logo">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-code coding"></i>
                         </div>
-                        <div class="service-item-title">コーディング・WP構築</div>
+                        <div class="service-item-title">HTMLコーディング</div>
                         <div class="service-item-text">
-                            １ページ単位からのコーディングや、WordPressの構築のみもお受けいたします。W3Cに準拠したコーディング、保守運用がしやすいWordPressでのWebサイトの管理をご希望の方はお問い合わせください。
+                            デザインに忠実なコーディングを心がけています。またCSSはSassおよびBEMなどの設計思想に基づき、保守性の高いコーディングを行います。
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-item-logo">
-                            <i class="fas fa-laptop-code"></i>
+                            <i class="fab fa-wordpress wordpress"></i>
                         </div>
-                        <div class="service-item-title">ホームページ制作</div>
+                        <div class="service-item-title">WordPressサイト構築</div>
                         <div class="service-item-text">
-                            お客様のサービスの魅力を最大限に伝えるWebサイト制作をお手伝いいたします。最大限の効果を発揮できるサイト作りを一緒に実現しましょう。ディレクションからデザイン、保守・運用までサポートいたします。
+                            世界のwebサイトの3/1がWordPressで作られています。ゼロからのセットアップやカスタマイズなど柔軟に対応可能です。保守運用がしやすいWordPressでのWebサイトの管理をご希望の方はお問い合わせください。
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-item-logo">
-                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-laptop-code seo"></i>
                         </div>
-                        <div class="service-item-title">ECサイト制作</div>
+                        <div class="service-item-title">SEO内部施策</div>
                         <div class="service-item-text">
-                            『Shopify』というプラットフォームを利用したECサイトの構築を行います。お客様のご希望に合ったテンプレートの選定とカスタマイズ、リリースまで一貫してサポートいたします。
+                            W3Cの文法に沿った正しいコーディングや各ページのtitle,discription,h1の最適化など、SEOの基礎と呼ばれる内部施策については標準で対応しています。
                         </div>
                     </div>
                 </div>
+                <div class="service-price"><a href="./price.html">料金表はこちら　＞</a></div>
             </div>
         </div>
     </section>
     <section class="contact section" id="contact-section">
         <div class="inner">
-            <h1 class="section-title"><img src="./img/contact/contact.png" alt="works"></h1>
+            <h1 class="section-title gothic">
+                Contact<br>
+                <span>お問い合わせ</span>
+            </h1>
             <div class="page-desc">
-                <p>お気軽に下記メールアドレスまでご連絡ください。<br class="pc-i">ご依頼の方は「<a href="#" class="contact-check">ご依頼方法</a>」をご確認ください。</p>
+                <p>
+                    お気軽に下記メールアドレスからご連絡ください。<br>
+                    <a href="./contact.html">こちら</a>から営業日などの確認が可能です。
+                </p>
             </div>
             <div class="contact-mail">
                 <p class="contact-mail__address">
@@ -297,8 +294,8 @@
                     </span>
                 </p>
                 <p class="contact-mail__note"><small>翌営業日までに返信いたします。<br class="pc-i">もし返信がない場合は<a href="contact.html" class="contact-check">こちら</a>をご確認ください。</small></p>
-                <div class="breadcrumbs">
-                    <ul class="breadcrumbs__list">
+                <div class="home">
+                    <ul class="home__list">
                         <li><a href="#">HOME</a></li>
                     </ul>
                 </div>

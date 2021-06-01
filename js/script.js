@@ -10,6 +10,96 @@ $(function () {
     });
 });
 
+// ヘッダー名前
+new Vivus('move', {
+    type: 'oneByOne',
+    duration: 150,
+    forceRender: false,
+    animTimingFunction: Vivus.EASE_OUT
+})
+
+// ハンバーガーメニュー
+var $nav = $('#navArea');
+var $btn = $('.toggle_btn');
+var $mask = $('.gnav-item');
+var $link = $('.gnav-link');
+var open = 'open'; // class
+// menu open close
+$btn.on('click', function () {
+    if (!$nav.hasClass(open)) {
+        $nav.addClass(open);
+        $("html").addClass("is-fixed");
+    } else {
+        $nav.removeClass(open);
+        $("html").removeClass("is-fixed");
+    }
+});
+// mask close
+$link.on('click', function () {
+    if ($nav.hasClass(open)) {
+        $nav.removeClass(open);
+        $("html").removeClass("is-fixed");
+    }
+});
+
+// Swiper
+var mySwiper = new Swiper('.swiper-container', {
+	slidesPerView: 1,
+    spaceBetween: 50,
+    autoplay: {
+        delay: 5000,
+    },
+    loop: true,
+	breakpoints: {
+		1300: {
+            slidesPerView: 3,
+            currentSlides: true
+		},
+		600: {
+			slidesPerView: 2
+		}
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	}
+});
+
+// フッターでハンバーガーメニューとロゴの色を変える
+function changeColor() {
+    var timing = 80; //タイミング調整
+
+    var scrollY = window.pageYOffset;
+    var body = document.body;
+
+    var trigger1 = document.getElementById('js-section-1');
+    var trigger2 = document.getElementById('js-section-2');
+
+    var trigger1Y = trigger1.getBoundingClientRect().top; // ウィンドウ上からの要素の位置
+    var trigger2Y = trigger2.getBoundingClientRect().top;
+
+    // 白背景の時はbodyの.bg-is-blackを削除
+    // 黒背景の時はbodyに.bt-is-blackを付与
+    if(trigger2Y - timing > 0 && 0 >= trigger1Y - timing) {
+        body.classList.remove('bg-is-black');
+    } else {
+        body.classList.add('bg-is-black');
+    }
+}
+window.addEventListener('scroll', changeColor);
+
+//下から表示させる要素を指定
+let $pagetop2 = $('.toggle_btn');
+
+$(window).on('scroll', function () {
+  //スクロール位置を取得
+    if ( $(this).scrollTop() < 500 ) {
+    $pagetop2.removeClass('logo-active');
+    } else {
+    $pagetop2.addClass('logo-active');
+    }
+});
+
 // ヘッダーアニメーション
 particlesJS('hoge', {
     "particles": {
@@ -148,91 +238,4 @@ particlesJS('hoge', {
     },
     "retina_detect": true, //Retina Displayを対応するか否か
     "resize": true //canvasのサイズ変更にわせて拡大縮小するか否か
-}
-);
-
-// ヘッダー名前
-new Vivus('move', {
-    type: 'oneByOne',
-    duration: 150,
-    forceRender: false,
-    animTimingFunction: Vivus.EASE_OUT
-})
-
-// ハンバーガーメニュー
-var $nav = $('#navArea');
-var $btn = $('.toggle_btn');
-var $mask = $('.gnav-item');
-var $link = $('.gnav-link');
-var open = 'open'; // class
-// menu open close
-$btn.on('click', function () {
-    if (!$nav.hasClass(open)) {
-        $nav.addClass(open);
-        $("html").addClass("is-fixed");
-    } else {
-        $nav.removeClass(open);
-        $("html").removeClass("is-fixed");
-    }
-});
-// mask close
-$link.on('click', function () {
-    if ($nav.hasClass(open)) {
-        $nav.removeClass(open);
-        $("html").removeClass("is-fixed");
-    }
-});
-
-// Swiper
-var mySwiper = new Swiper('.swiper-container', {
-	slidesPerView: 1,
-	spaceBetween: 50,
-	breakpoints: {
-		1300: {
-            slidesPerView: 3,
-            currentSlides: true
-		},
-		600: {
-			slidesPerView: 2
-		}
-	},
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}
-});
-
-function changeColor() {
-    var timing = 30; //　変化するタイミングを微調整する
-  
-    var scrollY = window.pageYOffset;
-    var body = document.body;
-  
-    var trigger1 = document.getElementById('js-section-1');
-    var trigger2 = document.getElementById('js-section-2');
-  
-    var trigger1Y = trigger1.getBoundingClientRect().top; // ウィンドウ上からの要素の位置
-    var trigger2Y = trigger2.getBoundingClientRect().top;
-  
-    // 白背景の時はbodyの.bg-is-blackを削除
-    // 黒背景の時はbodyに.bt-is-blackを付与
-    if(trigger2Y - timing > 0 && 0 >= trigger1Y - timing) {
-        body.classList.remove('bg-is-black');
-    } else {
-        body.classList.add('bg-is-black');
-    }
-  }
-  
-window.addEventListener('scroll', changeColor);
-
-//下から表示させる要素を指定
-let $pagetop2 = $('.toggle_btn');
-
-$(window).on( 'scroll', function () {
-  //スクロール位置を取得
-  if ( $(this).scrollTop() < 500 ) {
-    $pagetop2.removeClass('logo-active');
-  } else {
-    $pagetop2.addClass('logo-active');
-  }
 });
