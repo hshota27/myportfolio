@@ -82,7 +82,7 @@ video {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  font-family: "source-han-sans-japanese", sans-serif;
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
 
 body {
@@ -146,6 +146,10 @@ a:hover {
   cursor: pointer;
 }
 
+img {
+  width: 100%;
+}
+
 /* change colours to suit your needs */
 ins {
   background-color: #ff9;
@@ -195,9 +199,10 @@ select {
 フォント
 =======================*/
 .gothic {
-  font-family: "source-han-sans-japanese", sans-serif;
-  font-weight: 500;
+  font-family: 'fairplex-narrow', serif;
+  font-weight: 400;
   font-style: normal;
+  letter-spacing: 2.5px;
 }
 
 body {
@@ -1102,6 +1107,10 @@ contact
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.contact-mail__address span a {
+  border-bottom: 1px solid #000;
 }
 
 .contact-mail__address i {

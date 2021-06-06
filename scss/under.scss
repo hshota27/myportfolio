@@ -37,7 +37,8 @@
   .breadcrumbs {
     position: relative;
     top: -80px;
-    max-width: 80%;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
     color: #141415;
     font-size: 12px;
@@ -71,21 +72,55 @@
     padding-bottom: 8px;
   }
   .u-works {
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
 
+    /*======================
+    works.html
+    =======================*/
+    &__ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: calc(-30px / 2);
+      padding: 30px;
+    }
+    &__list {
+      width: calc(100% / 3 - 30px);
+      margin: 60px calc(30px / 2) 0;
+
+      &--title {
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 12px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      &__list {
+        width: calc(100% / 2 - 30px);
+      }
+    }
+    @media screen and (max-width: 599px) {
+      &__list {
+        width: calc(100% / 1 - 30px);
+      }
+    }
+    /*======================
+    works-n.html
+    =======================*/
     &__title {
       text-align: center;
       margin-top: 40px;
 
       h2 {
         font-size: 26px;
+        font-weight: 400 !important;
         letter-spacing: 1.4px;
         font-weight: bold;
       }
-      p {
+      a {
         letter-spacing: 1.4px;
+        font-size: 12px;
       }
     }
     &__img {
@@ -96,24 +131,23 @@
       }
     }
     &__feature {
-      width: 90%;
+      width: 75%;
       margin: 0 auto;
       font-size: 14px;
-      letter-spacing: 1.4px;
+      letter-spacing: 1.8px;
+      line-height: 20px;
     }
     &__col-1 {
       margin: 60px auto 0 auto;
       text-align: center;
-      font-size: 14px;
+      font-size: 12px;
 
       .bold {
         display: block;
         margin-bottom: 12px;
       }
-      a {
-        &:hover {
-          text-decoration: underline;
-        }
+      p {
+        font-size: 14px;
       }
     }
     &__col-2 {
@@ -139,7 +173,7 @@
     text-align: center;
 
     .section-lead {
-      margin-bottom: 40px;
+      margin-bottom: 100px;
     }
     .heading-primary {
       font-size: 48px;
@@ -292,16 +326,16 @@
     }
   }
 }
-  /*======================
+/*======================
   フッター
   =======================*/
-  .u-footer {
-    background-color: #fff;
-    
-    a {
-      color: #141414 !important;
-    }
-    .copyright {
-      color: #141414;
-    }
+.u-footer {
+  background-color: #fff;
+
+  a {
+    color: #141414 !important;
   }
+  .copyright {
+    color: #141414;
+  }
+}

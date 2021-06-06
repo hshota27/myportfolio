@@ -49,7 +49,8 @@
 .u-main .breadcrumbs {
   position: relative;
   top: -80px;
-  max-width: 80%;
+  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   color: #141415;
   font-size: 12px;
@@ -86,9 +87,48 @@
 }
 
 .u-main .u-works {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  /*======================
+    works.html
+    =======================*/
+  /*======================
+    works-n.html
+    =======================*/
+}
+
+.u-main .u-works__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: calc(-30px / 2);
+  padding: 30px;
+}
+
+.u-main .u-works__list {
+  width: calc(100% / 3 - 30px);
+  margin: 60px calc(30px / 2) 0;
+}
+
+.u-main .u-works__list--title {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .u-main .u-works__list {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .u-main .u-works__list {
+    width: calc(100% / 1 - 30px);
+  }
 }
 
 .u-main .u-works__title {
@@ -98,12 +138,14 @@
 
 .u-main .u-works__title h2 {
   font-size: 26px;
+  font-weight: 400 !important;
   letter-spacing: 1.4px;
   font-weight: bold;
 }
 
-.u-main .u-works__title p {
+.u-main .u-works__title a {
   letter-spacing: 1.4px;
+  font-size: 12px;
 }
 
 .u-main .u-works__img {
@@ -115,16 +157,17 @@
 }
 
 .u-main .u-works__feature {
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
   font-size: 14px;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.8px;
+  line-height: 20px;
 }
 
 .u-main .u-works__col-1 {
   margin: 60px auto 0 auto;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .u-main .u-works__col-1 .bold {
@@ -132,8 +175,8 @@
   margin-bottom: 12px;
 }
 
-.u-main .u-works__col-1 a:hover {
-  text-decoration: underline;
+.u-main .u-works__col-1 p {
+  font-size: 14px;
 }
 
 .u-main .u-works__col-2 {
@@ -156,7 +199,7 @@
 }
 
 .u-main .price-section .section-lead {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 .u-main .price-section .heading-primary {
