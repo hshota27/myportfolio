@@ -195,6 +195,23 @@ select {
     vertical-align: middle;
 }
 
+.pc-only {
+    display: block;
+}
+
+.sp-only {
+    display: none;
+}
+
+@media screen and (max-width: 789px) {
+    .pc-only {
+        display: none !important;
+    }
+    .sp-only {
+        display: block !important;
+    }
+}
+
 /*======================
 フォント
 =======================*/
@@ -651,13 +668,15 @@ work
 }
 
 @media screen and (max-width: 567px) {
-    .pc567-only {
-        display: none !important;
-    }
-    .sp567-only {
-        display: block !important;
-        padding: 0 15px;
-        box-sizing: border-box;
+    .jisseki {
+        .pc567-only {
+            display: none !important;
+        }
+        .sp567-only {
+            display: block !important;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
     }
 }
 
@@ -1114,7 +1133,7 @@ body.bg-is-black .footer-logo {
         }
         .copyright {
             width: 100%;
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 }

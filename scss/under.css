@@ -33,6 +33,17 @@
   color: #141414;
 }
 
+@media screen and (max-width: 789px) {
+  .u-header::after {
+    top: -124px;
+    height: 80px;
+  }
+  .u-header .u-logo {
+    top: 35px !important;
+    left: 28px !important;
+  }
+}
+
 .u-main {
   position: relative;
   /*======================
@@ -80,6 +91,15 @@
   font-size: 14px;
 }
 
+@media screen and (max-width: 789px) {
+  .u-main .breadcrumbs {
+    display: none;
+  }
+  .u-main .inner {
+    margin: 120px 0;
+  }
+}
+
 .u-main .u-works-title {
   font-size: 28px;
   border-bottom: 1px solid #000;
@@ -119,6 +139,31 @@
   font-size: 12px;
 }
 
+.u-main .u-works .u-jisseki {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.u-main .u-works .u-jisseki .performance-pc {
+  padding-top: 60px;
+  font-size: 14px;
+}
+
+.u-main .u-works .u-jisseki .performance-pc .big {
+  font-size: 20px;
+}
+
+.u-main .u-works .u-jisseki .attention {
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.u-main .u-works .u-jisseki .sp567-only {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .u-main .u-works__list {
     width: calc(100% / 2 - 30px);
@@ -128,6 +173,18 @@
 @media screen and (max-width: 599px) {
   .u-main .u-works__list {
     width: calc(100% / 1 - 30px);
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .u-main .u-works .jisseki .pc567-only {
+    display: none !important;
+  }
+  .u-main .u-works .jisseki .sp567-only {
+    display: block !important;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 
@@ -146,10 +203,11 @@
 .u-main .u-works__title a {
   letter-spacing: 1.4px;
   font-size: 12px;
+  word-wrap: break-word;
 }
 
 .u-main .u-works__img {
-  margin: 60px auto 60px auto;
+  margin: 60px auto;
 }
 
 .u-main .u-works__img img {
@@ -161,7 +219,17 @@
   margin: 0 auto;
   font-size: 14px;
   letter-spacing: 1.8px;
-  line-height: 20px;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 789px) {
+  .u-main .u-works__img {
+    margin: 40px auto;
+  }
+  .u-main .u-works__feature {
+    width: 100%;
+    font-size: 12px;
+  }
 }
 
 .u-main .u-works__col-1 {
@@ -228,6 +296,15 @@
   text-align: center;
 }
 
+@media screen and (max-width: 789px) {
+  .u-main .price-section .price-list {
+    width: 100%;
+  }
+  .u-main .price-section .price-note {
+    font-size: 14px;
+  }
+}
+
 .u-main .u-contact {
   /*カレンダー*/
   /*日曜日*/
@@ -240,10 +317,17 @@
 .u-main .u-contact .attention-box {
   border: 1px solid #141414;
   max-width: 600px;
-  width: 100%;
   padding: 32px 20px;
   margin: 60px auto 40px auto;
   font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .u-main .u-contact .attention-box {
+    padding: 20px 10px;
+    margin: 60px -10px 40px -5px;
+    font-size: 12px;
+  }
 }
 
 .u-main .u-contact .attention-list {
