@@ -774,9 +774,7 @@ about
 .about .home-profile-dt {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 30px;
   font-size: 24px;
-  font-size: 2.4rem;
   font-family: "Cardo", serif;
   font-style: italic;
   letter-spacing: 0.1em;
@@ -787,13 +785,6 @@ about
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.about .home-profile-dd {
-  margin-bottom: 14px;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  line-height: 2.167;
 }
 
 .about .home-profile-data li {
