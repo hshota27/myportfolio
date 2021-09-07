@@ -629,7 +629,7 @@ work
         background-image: none !important; 
         width: 28px !important; 
         margin-top: -43px !important; 
-        top: 37% !important;
+        top: 40% !important;
     }
     .swiper-button-prev {
         left: 4% !important;
@@ -663,7 +663,7 @@ work
         background-image: none !important; 
         width: 28px !important;
         margin-top: -43px !important; 
-        top: 38% !important;
+        top: 42% !important;
     }
 }
 
@@ -767,18 +767,26 @@ about
 }
 
 @media screen and (max-width: 789px) {
-    .about-img {
-        margin: 0 auto;
-        width: 80px !important;
-        height: 80px !important;
-    }
-    .home-profile-container {
-        padding: 48px 15px !important;
-        box-sizing: border-box;
-    }
-    .home-profile-dt {
-        img {
-            width: 60%;
+    .about {
+        .parallax {
+            padding-bottom: 60px;
+        }
+        .about-img {
+            margin: 0 auto;
+            width: 80px !important;
+            height: 80px !important;
+        }
+        .home-profile-container {
+            padding: 48px 15px !important;
+            box-sizing: border-box;
+        }
+        .home-profile-dt {
+            img {
+                width: 48%;
+            }
+        }
+        .home-profile-data li {
+            font-size: 13px;
         }
     }
 }
@@ -833,6 +841,7 @@ skill
 @media screen and (max-width: 789px) {
     .skill {
         height: 100% !important;
+        padding-top: 60px;
         padding-bottom: 50px;
     }
     .skill-list {
@@ -961,9 +970,10 @@ service
     }
     .service-item {
         max-width: 400px;
-        padding: 40px 20px !important;
+        padding: 40px 0 !important;
         margin: 30px auto !important;
         text-align: center;
+        width: unset !important;
     }
     .service-item-text {
         font-size: 12px;
