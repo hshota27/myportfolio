@@ -847,7 +847,7 @@ skill
 @media screen and (max-width: 789px) {
     .skill {
         height: 100% !important;
-        padding-bottom: 50px;
+        padding: 50px 0;
     }
     .skill-list {
         padding: 0 15px !important;
@@ -968,12 +968,12 @@ service
         top: unset !important;
         left: unset !important;
         transform: unset !important;
-        padding: 50px 0;
+        padding: 40px 0 0 !important;
     }
     .service-item {
         max-width: 400px;
         width: unset;
-        padding: 40px 20px !important;
+        padding: 40px 0 !important;
         margin: 30px auto !important;
         text-align: center;
     }
