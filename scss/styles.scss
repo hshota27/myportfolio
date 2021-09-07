@@ -492,108 +492,108 @@ work
     .parallax {
         height: 100vh;
     }
+}
 
-    .swiper-container {
-        position: absolute !important;
-        top: 46% !important;
+.swiper-container {
+    position: absolute !important;
+    top: 46% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    overflow: hidden;
+
+    a {
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        transition: all 0.3s;
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+
+        &:hover {
+            transform: scale(1.2, 1.2);
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 46% !important;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000 !important;
+}
+
+.swiper-button-prev {
+    left: 9% !important;
+}
+
+.swiper-button-next {
+    right: 9% !important;
+}
+
+.jisseki {
+    .pc567-only {
+        display: block;
+        position: absolute;
+        bottom: 4%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 72%;
-        overflow: hidden;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
     }
+    .sp567-only {
+        display: none;
 
-    .swiper-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: flex;
-        transition-property: transform;
-        box-sizing: content-box;
-    }
-
-    .swiper-slide {
-        flex-shrink: 0;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transition-property: transform;
-        overflow: hidden;
-
-        a {
-            width: 100%;
-            height: 100%;
-        }
-        img {
-            transition: all 0.3s;
-            width: 100%;
-            height: 100%;
-            vertical-align: bottom;
-
-            &:hover {
-                transform: scale(1.2, 1.2);
-            }
-        }
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        position: absolute;
-        top: 46% !important;
-        width: calc(var(--swiper-navigation-size) / 44 * 27);
-        height: var(--swiper-navigation-size);
-        margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
-        z-index: 10;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #000 !important;
-    }
-
-    .swiper-button-prev {
-        left: 9% !important;
-    }
-
-    .swiper-button-next {
-        right: 9% !important;
-    }
-
-    .jisseki {
-        .pc567-only {
-            display: block;
-            position: absolute;
-            bottom: 4%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-        }
-        .sp567-only {
-            display: none;
-
-            .performance-sp {
-                padding-top: 60px;
-            }
-            p {
-                text-align: center;
-                font-size: 14px;
-            }
-        }
-        .performance-pc {
-            text-align: center;
+        .performance-sp {
             padding-top: 60px;
-            font-size: 14px;
-
-            .big {
-                font-size: 20px;
-            }
         }
-        .attention {
+        p {
             text-align: center;
-            padding-top: 15px;
             font-size: 14px;
         }
+    }
+    .performance-pc {
+        text-align: center;
+        padding-top: 60px;
+        font-size: 14px;
+
+        .big {
+            font-size: 20px;
+        }
+    }
+    .attention {
+        text-align: center;
+        padding-top: 15px;
+        font-size: 14px;
     }
 }
 
@@ -688,6 +688,7 @@ about
 
     .parallax {
         position: relative;
+        height: 100vh;
     }
     .about-img {
         width: 120px;

@@ -513,7 +513,7 @@ work
   height: 100vh;
 }
 
-.works .swiper-container {
+.swiper-container {
   position: absolute !important;
   top: 46% !important;
   left: 50%;
@@ -523,7 +523,7 @@ work
   overflow: hidden;
 }
 
-.works .swiper-wrapper {
+.swiper-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -539,7 +539,7 @@ work
           box-sizing: content-box;
 }
 
-.works .swiper-slide {
+.swiper-slide {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 100%;
@@ -552,12 +552,12 @@ work
   overflow: hidden;
 }
 
-.works .swiper-slide a {
+.swiper-slide a {
   width: 100%;
   height: 100%;
 }
 
-.works .swiper-slide img {
+.swiper-slide img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 100%;
@@ -565,13 +565,13 @@ work
   vertical-align: bottom;
 }
 
-.works .swiper-slide img:hover {
+.swiper-slide img:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-.works .swiper-button-prev,
-.works .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   top: 46% !important;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
@@ -591,15 +591,15 @@ work
   color: #000 !important;
 }
 
-.works .swiper-button-prev {
+.swiper-button-prev {
   left: 9% !important;
 }
 
-.works .swiper-button-next {
+.swiper-button-next {
   right: 9% !important;
 }
 
-.works .jisseki .pc567-only {
+.jisseki .pc567-only {
   display: block;
   position: absolute;
   bottom: 4%;
@@ -609,30 +609,30 @@ work
   -ms-transform: translate(-50%, -50%);
 }
 
-.works .jisseki .sp567-only {
+.jisseki .sp567-only {
   display: none;
 }
 
-.works .jisseki .sp567-only .performance-sp {
+.jisseki .sp567-only .performance-sp {
   padding-top: 60px;
 }
 
-.works .jisseki .sp567-only p {
+.jisseki .sp567-only p {
   text-align: center;
   font-size: 14px;
 }
 
-.works .jisseki .performance-pc {
+.jisseki .performance-pc {
   text-align: center;
   padding-top: 60px;
   font-size: 14px;
 }
 
-.works .jisseki .performance-pc .big {
+.jisseki .performance-pc .big {
   font-size: 20px;
 }
 
-.works .jisseki .attention {
+.jisseki .attention {
   text-align: center;
   padding-top: 15px;
   font-size: 14px;
@@ -730,6 +730,7 @@ about
 
 .about .parallax {
   position: relative;
+  height: 100vh;
 }
 
 .about .about-img {
