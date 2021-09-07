@@ -927,10 +927,6 @@ service
   height: 100vh;
 }
 
-.services .parallax {
-  height: 100vh;
-}
-  
 .services .service-items {
   display: -webkit-box;
   display: -ms-flexbox;

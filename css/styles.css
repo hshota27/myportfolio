@@ -509,7 +509,7 @@ work
   opacity: 0.5s;
 }
 
-.works .parallax {
+.parallax {
   height: 100vh;
 }
 
@@ -730,7 +730,6 @@ about
 
 .about .parallax {
   position: relative;
-  height: 100vh;
 }
 
 .about .about-img {
@@ -795,48 +794,39 @@ about
 }
 
 @media screen and (min-width: 1500px) {
-  .about .home-profile-container {
+  .home-profile-container {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  .about .home-profile-dd {
+  .home-profile-dd {
     font-size: 16px;
   }
-  .about .home-profile-dt {
+  .home-profile-dt {
     font-size: 16px;
   }
-  .about .home-profile-container li {
+  .home-profile-container li {
     font-size: 16px;
   }
-  .about .home-profile-p {
+  .home-profile-p {
     font-size: 18px;
   }
 }
 
 @media screen and (max-width: 789px) {
-  .about .parallax {
-    padding-bottom: 60px;
-  }
-}
-
-@media screen and (max-width: 789px) {
-  .about {
-    height: 100% !important;
-  }
-  .about .about-img {
+  .about-img {
     margin: 0 auto;
     width: 80px !important;
     height: 80px !important;
   }
-  .about .home-profile-container {
+  .home-profile-container {
     padding: 48px 15px !important;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .about .home-profile-dt img {
+  .home-profile-dt img {
     width: 60%;
   }
 }
@@ -907,7 +897,7 @@ skill
 @media screen and (max-width: 789px) {
   .skill {
     height: 100% !important;
-    padding: 50px 0;
+    padding-bottom: 50px;
   }
   .skill-list {
     padding: 0 15px !important;
@@ -934,6 +924,10 @@ service
 .services {
   position: relative;
   width: 100%;
+  height: 100vh;
+}
+
+.services .parallax {
   height: 100vh;
 }
 
@@ -1054,12 +1048,11 @@ service
     left: unset !important;
     -webkit-transform: unset !important;
             transform: unset !important;
-    padding: 40px 0 0 !important;
+    padding: 50px 0;
   }
   .service-item {
     max-width: 400px;
-    width: unset;
-    padding: 40px 0 !important;
+    padding: 40px 20px !important;
     margin: 30px auto !important;
     text-align: center;
   }
