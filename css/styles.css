@@ -1704,6 +1704,9 @@ top-work
 }
 
 @media screen and (max-width: 789px) {
+  .works {
+    padding-bottom: 100px;
+  }
   .works .section-title {
     padding-top: 130px;
     padding-bottom: 50px;
