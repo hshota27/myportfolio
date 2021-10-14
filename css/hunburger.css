@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/*--------------------------------
+  ハンバーガーメニュー
+  ----------------------------------*/
+#navArea {
+  display: block;
+}
+
+.hunburger {
+  background-color: #555;
+  display: block;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.open .hunburger {
+  left: 0;
+  opacity: 100;
+  z-index: 100;
+}
+
+.is-fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
+.hunburger .inner {
+  height: 100%;
+  position: relative;
+}
+
+.hunburger .inner ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hunburger .inner ul li {
+  position: relative;
+  margin: 0;
+  margin-bottom: 50%;
+  text-align: center;
+}
+
+.hunburger .inner ul li:last-child {
+  margin-bottom: 0;
+}
+
+.hunburger .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.hunburger .inner ul li a:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+/*============
+  .toggle_btn
+  =============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 80px;
+  width: 60px;
+  height: 30px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+}
+
+.toggle_btn.logo-active {
+  opacity: 1;
+}
+
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #161615;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.bg-is-black .toggle_btn span {
+  background-color: #f4f4f4;
+}
+
+.toggle_btn span:nth-child(1) {
+  top: 5px;
+  width: 40px;
+}
+
+.toggle_btn span:nth-child(2) {
+  top: 15px;
+  width: 40px;
+}
+
+.toggle_btn span:nth-child(3) {
+  top: 25px;
+  width: 40px;
+}
+
+.open .toggle_btn span {
+  background-color: #666;
+  width: 30px;
+}
+
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translate(0, 10px) rotate(-45deg);
+          transform: translate(0, 10px) rotate(-45deg);
+  -webkit-animation: unset;
+          animation: unset;
+}
+
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: unset;
+          animation: unset;
+}
+
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translate(0, -10px) rotate(45deg);
+          transform: translate(0, -10px) rotate(45deg);
+  -webkit-animation: unset;
+          animation: unset;
+}
+
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+}
+
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 789px) {
+  .toggle_btn {
+    top: 30px;
+    right: 20px;
+  }
+}
+/*# sourceMappingURL=hunburger.css.map */

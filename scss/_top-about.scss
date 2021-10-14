@@ -1,0 +1,115 @@
+/*======================
+top-about
+=======================*/
+.about {
+    width: 100%;
+    height: 100vh;
+
+    .parallax {
+        position: relative;
+    }
+    .face {
+        width: 120px;
+        height: 120px;
+        border-radius: 99px;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            border-radius: 99px;
+        }
+    }
+    &__profile {
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 auto;
+        padding: 120px 100px;
+
+        .name {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-size: 24px;
+            font-family: "Cardo", serif;
+            font-style: italic;
+            letter-spacing: 0.1em;
+    
+            img {
+                max-width: 400px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+        .info {
+            margin-bottom: 14px;
+
+            li {
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                line-height: 2.167;
+            }
+        }
+        .text {
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            line-height: 2.167;
+    
+            .none {
+                text-decoration: line-through;
+            }
+            a {
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    // About
+    .about {
+        &__profile {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+    .face {
+        font-size: 16px;
+    }
+    .info {
+        font-size: 16px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 789px) {
+    .about {
+        .parallax {
+            padding-bottom: 60px;
+        }
+        &__profile {
+            padding: 48px 15px !important;
+            box-sizing: border-box;
+
+            .face{
+                width: 80px !important;
+                height: 80px !important;
+            }
+            .name {
+                img {
+                    width: 48%;
+                }
+            }
+            .info li {
+                font-size: 13px;
+            }
+        }
+    }
+}

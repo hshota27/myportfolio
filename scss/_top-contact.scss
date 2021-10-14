@@ -1,0 +1,83 @@
+/*======================
+contact
+=======================*/
+.contact {
+  width: 100%;
+  height: 100vh;
+}
+
+.page-desc {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 500;
+  margin: 72px 0 50px 0;
+
+  a {
+      border-bottom: 1px solid #000;
+  }
+}
+
+.contact-mail {
+  position: relative;
+  margin: 0 0 50px;
+  padding-top: 12px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+.contact-mail__address {
+  margin-bottom: 50px;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.contact-mail__address span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-mail__address span a {
+  border-bottom: 1px solid #000;
+}
+
+.contact-mail__address i {
+  margin-right: 10px;
+}
+
+.contact-mail__note {
+  margin-bottom: 50px;
+}
+
+.contact-check {
+  border-bottom: 1px solid #000;
+}
+
+.home {
+  margin: 0 0 70px;
+  text-align: center;
+  position: relative;
+  padding-top: 180px;
+}
+
+.home:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 150px;
+  background-color: rgba(22, 22, 21, 0.3);
+  z-index: 10;
+}
+
+@media screen and (max-width: 789px) {
+  .page-desc {
+      font-size: 14px;
+  }
+}

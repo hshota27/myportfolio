@@ -1,0 +1,154 @@
+/*======================
+service
+=======================*/
+.services {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .parallax {
+        height: 100vh;
+    }
+    .service-items {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 15px 0 15px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .service-item {
+        color: #555;
+        position: relative;
+        width: 300px;
+        padding: 40px 0px;
+        margin: 2em 0;
+        font-size: 14px;
+    }
+    .service-item-logo {
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+        .coding {
+            font-size: 36px;
+        }
+        .wordpress {
+            font-size: 50px;
+        }
+        .seo {
+            font-size: 36px;
+        }
+    }
+    .service-item-title {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #f6b483;
+    }
+    .service-item-text {
+        line-height: 30px;
+    }
+    .service-price {
+        position: absolute;
+        bottom: 14%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .services {
+        .section-title {
+            padding-top: 120px;
+        }
+    }
+    .service-items {
+        max-width: 1500px;
+        width: 100%;
+    }
+    .service-item {
+        width: 25%;
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+    .service-item {
+        width: 45%;
+    }
+    .service-item-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 556px) and (max-width: 1024px) {
+    .service-item {
+        width: 260px;
+    }
+    .service-item-text {
+        font-size: 14px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 789px) {
+    .services {
+        height: 100% !important;
+
+        .parallax {
+            height: 100%;
+        }
+        .section-title {
+            max-width: 180px;
+        }
+    }
+    .service-item-text {
+        font-size: 12px;
+        margin: 0 auto;
+    }
+
+    .service-items {
+        flex-direction: column;
+        position: unset !important;
+        top: unset !important;
+        left: unset !important;
+        transform: unset !important;
+        padding: 50px 0;
+    }
+    .service-item {
+        max-width: 400px;
+        padding: 40px 0 !important;
+        margin: 30px auto !important;
+        text-align: center;
+        width: unset !important;
+    }
+    .service-item-text {
+        font-size: 12px;
+        margin: 0 auto;
+    }
+    .service-price {
+        position: unset !important;
+        bottom: unset !important;
+        left: unset !important;
+        transform: unset !important;
+        text-align: center;
+        padding-bottom: 80px;
+    }
+}
