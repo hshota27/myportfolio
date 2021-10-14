@@ -13,14 +13,14 @@
     <title>Hattori Shota</title>
     <script>
         (function(d) {
-          var config = {
-            kitId: 'vbb4bvl',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            var config = {
+                kitId: 'vbb4bvl',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
-      </script>
+    </script>
 </head>
 
 <body>
@@ -55,10 +55,10 @@
                     </svg>
                 </div>
             </div>
-            <!-- .hunburger -->
+            <!-- .hamburger -->
             <div id="navArea">
 
-                <nav class="hunburger">
+                <nav class="hamburger">
                     <div class="inner">
                         <ul>
                             <li class="gnav-item"><a class="gnav-link gothic" href="#hoge">HOME</a></li>
@@ -81,21 +81,21 @@
                 <!-- <div id="mask"></div> -->
 
             </div>
-            <!-- /.hunburger -->
+            <!-- /.hamburger -->
         </div>
     </header>
+
+    <!-- section start -->
     <section class="works section" id="works-section">
         <h1 class="section-title gothic" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500">
             WORKS<br>
             <span>作品集</span>
         </h1>
-
+        
+        <!-- works -->
         <div class="works__swiper">
-            <!-- スライダーのメインコンテナの div 要素 -->
             <div class="swiper-container">
-                <!-- ラッパーの（スライドを囲む） div 要素 -->
                 <div class="swiper-wrapper">
-                    <!-- それぞれのスライドの div 要素 -->
                     <div class="swiper-slide" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500">
                         <a href="./works/works-1.html">
                             <img src="./img/works/works-1.png" alt="">
@@ -118,7 +118,6 @@
                     </div>
                 </div>
             </div>
-            <!-- ナビゲーションボタンの div 要素-->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
@@ -143,41 +142,39 @@
             </div>
         </div>
     </section>
+
+    <!-- about -->
     <section class="about section" id="about-section">
         <div class="parallax" data-parallax="scroll" data-image-src="./img/about/parallax_about.jpeg">
-            <div class="home-profile">
-                <div class="home-profile-container">
-                    <div class="about-img"  data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500">
-                        <img src="./img/about/profile2.jpg" alt="">
-                    </div>
-                    <dl>
-                        <dt class="home-profile-dt"><img src="./img/about/about.png" alt="Hattori Shota"></dt>
-                    </dl>
-                    <ul class="home-profile-data">
-                        <li>tel: <a href="tel:08082983507">080-8298-3507</a></li>
-                        <li>mail: <a href="mailto:hshota.27&#64;gmail.com">hshota.27@gmail.com</a>
-                        </li>
-                        <!-- <li>[ <a href="https://www.facebook.com/kanmura" target="_blank">Facebook</a> ] [ <a
-                                href="https://moufdesign.tumblr.com" target="_blank">Tumblr</a> ]</li> -->
-                    </ul>
-                    <p class="home-profile-p">
-                        はじめまして。服部 翔太と申します。
-                        北海道札幌市在住、20歳。<br>
-                        北海学園大学経営学部に在学しながらWeb制作のフリーランスとして、
-                        日々活動しております。<br>
-                        お客様に寄り添い、納得されるまでしっかりと責任感を持ってお仕事をさせていただきます。<br>
-                        お仕事のご依頼は<a class="none">お問い合わせフォーム</a>また<a href="mailto:hshota.27@gmail.com">メール</a>よりお気軽にお送りください。
-                    </p>
-                    <p class="home-profile-p">
-                        I have been acting with the main business lines of web developer.<br>If
-                        you have some opinion or work to request, please feel free
-                        to contact us by the inquiry form or email.
-                    </p>
+            <div class="about__profile">
+                <div class="face"  data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500">
+                    <img src="./img/about/profile2.jpg" alt="">
                 </div>
-                <!--.home-profile-container-->
+                <dl>
+                    <dt class="name"><img src="./img/about/about.png" alt="Hattori Shota"></dt>
+                </dl>
+                <ul class="info">
+                    <li>tel: <a href="tel:08082983507">080-8298-3507</a></li>
+                    <li>mail: <a href="mailto:hshota.27&#64;gmail.com">hshota.27@gmail.com</a>
+                    </li>
+                    <!-- <li>[ <a href="https://www.facebook.com/kanmura" target="_blank">Facebook</a> ] [ <a
+                            href="https://moufdesign.tumblr.com" target="_blank">Tumblr</a> ]</li> -->
+                </ul>
+                <p class="text">
+                    はじめまして。服部 翔太と申します。
+                    北海道札幌市在住、20歳。<br>
+                    北海学園大学経営学部に在学しながらWeb制作のフリーランスとして、
+                    日々活動しております。<br>
+                    お客様に寄り添い、納得されるまでしっかりと責任感を持ってお仕事をさせていただきます。<br>
+                    お仕事のご依頼は<a class="none">お問い合わせフォーム</a>また<a href="mailto:hshota.27@gmail.com">メール</a>よりお気軽にお送りください。
+                </p>
+                <p class="text">
+                    I have been acting with the main business lines of web developer.<br>If
+                    you have some opinion or work to request, please feel free
+                    to contact us by the inquiry form or email.
+                </p>
             </div>
         </div>
-        <!--.home-profile-->
     </section>
     <section class="skill section" id="skills-section">
         <div class="inner">
