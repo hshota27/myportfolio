@@ -494,6 +494,89 @@ work
   position: relative;
 }
 
+.works__swiper {
+  position: relative;
+  margin-top: 200px;
+}
+
+.works__swiper .swiper-container {
+  position: absolute !important;
+  top: 46% !important;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 72%;
+  overflow: hidden;
+}
+
+.works__swiper .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.works__swiper .swiper-slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  overflow: hidden;
+}
+
+.works__swiper .swiper-slide a {
+  width: 100%;
+  height: 100%;
+}
+
+.works__swiper .swiper-slide img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.works__swiper .swiper-slide img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.works__swiper .swiper-button-prev,
+.works__swiper .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  color: #414141 !important;
+  margin-top: unset !important;
+}
+
+.works__swiper .swiper-button-prev {
+  left: 9% !important;
+}
+
+.works__swiper .swiper-button-next {
+  right: 9% !important;
+}
+
 .works__all {
   text-align: center;
   position: absolute;
@@ -511,92 +594,6 @@ work
 
 .parallax {
   height: 100vh;
-}
-
-.swiper-container {
-  position: absolute !important;
-  top: 46% !important;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 72%;
-  overflow: hidden;
-}
-
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
-
-.swiper-slide {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  overflow: hidden;
-}
-
-.swiper-slide a {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide img {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 100%;
-  height: 100%;
-  vertical-align: bottom;
-}
-
-.swiper-slide img:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: 46% !important;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
-  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
-  z-index: 10;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #000 !important;
-}
-
-.swiper-button-prev {
-  left: 9% !important;
-}
-
-.swiper-button-next {
-  right: 9% !important;
 }
 
 .jisseki .pc567-only {
@@ -646,6 +643,30 @@ work
     padding-top: 130px;
     padding-bottom: 50px;
   }
+  .works__swiper {
+    margin-top: 40px;
+  }
+  .works__swiper .swiper-container {
+    position: unset !important;
+    top: unset;
+    left: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    width: 72%;
+  }
+  .works__swiper .swiper-button-prev,
+  .works__swiper .swiper-button-next {
+    background-image: none !important;
+    width: 28px !important;
+  }
+  .works__swiper .swiper-button-prev {
+    left: 4% !important;
+    color: #000;
+  }
+  .works__swiper .swiper-button-next {
+    right: 4% !important;
+    color: #000;
+  }
   .works__all {
     position: unset !important;
     top: unset !important;
@@ -657,45 +678,6 @@ work
   .works .attention {
     font-size: 12px;
   }
-  .swiper-container {
-    position: unset !important;
-    top: unset;
-    left: unset;
-    -webkit-transform: unset;
-            transform: unset;
-    width: 72%;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    background-image: none !important;
-    width: 28px !important;
-    margin-top: -43px !important;
-    top: 40% !important;
-  }
-  .swiper-button-prev {
-    left: 4% !important;
-    color: #000;
-  }
-  .swiper-button-next {
-    right: 4% !important;
-    color: #000;
-  }
-  .swiper-button-prev:after {
-    font-family: "Font Awesome 5 Free" !important;
-    content: "<" !important;
-    display: inline-block;
-    width: 28px !important;
-    font-size: 48px !important;
-    color: #555555 !important;
-  }
-  .swiper-button-next:after {
-    font-family: "Font Awesome 5 Free" !important;
-    content: ">" !important;
-    display: inline-block;
-    width: 28px !important;
-    font-size: 48px !important;
-    color: #555555 !important;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -703,8 +685,6 @@ work
   .swiper-button-next {
     background-image: none !important;
     width: 28px !important;
-    margin-top: -43px !important;
-    top: 42% !important;
   }
 }
 
@@ -1211,7 +1191,7 @@ body.bg-is-black .footer-logo {
 
 .footer .footer-ul a {
   color: #f4f4f4;
-  font-size: 20px;
+  font-size: 18px;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
@@ -1234,7 +1214,7 @@ body.bg-is-black .footer-logo {
   .footer .footer-logo {
     top: 36px;
     left: 20px;
-    font-size: 18px;
+    font-size: 14px;
   }
   .footer .copyright {
     width: 100%;
